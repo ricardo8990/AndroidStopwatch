@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stopwatch</string>
+    <string name="Pause">Pausa</string>
+    <string name="Share">Compartir</string>
+    <string name="Stop">Detener</string>
+    <string name="StopwatchRunning">El cronómetro esta activo</string>
+    <string name="action_settings">Configuración</string>
+    <string name="new_lap">Nueva vuelta</string>
+    <string name="share_head_text">Compartir via</string>
+    <string name="share_title">Ricardo Stopwatch : Mi tiempo fue de {totalTime}</string>
+    <string name="start">Iniciar</string>
+    <string name="lap">Vuelta</string>
+</resources>

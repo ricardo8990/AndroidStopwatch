@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#303F9F">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/StopwatchLayout">
+        <TextView android:text="@string/zeros" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hours"
+            android:textColor="#ffffffff"
+            android:textSize="40sp"
+            android:paddingRight="10sp"
+            android:paddingEnd="10sp"
+            android:paddingLeft="10sp"/>
+        <TextView
+            android:text="@string/zeros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/minutes"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:paddingRight="10sp"
+            android:paddingEnd="10sp"
+            android:paddingLeft="10sp"/>
+        <TextView
+            android:text="@string/zeros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seconds"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"/>
+        <TextView
+            android:text="@string/zeros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/milliseconds"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lapList"
+        android:layout_alignBottom="@id/StopwatchLayout"
+        android:stackFromBottom="true"
+        android:animateLayoutChanges="true"
+        android:paddingBottom="40sp"
+        android:layout_centerInParent="true" />
+
+    <ImageButton
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:src="@mipmap/ic_start"
+        android:background="@drawable/roundcorner"
+        android:id="@+id/buttonStart"
+        android:onClick="startStopWatch"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/start"
+        android:adjustViewBounds="true"
+        android:longClickable="true"/>
+
+    <ImageButton
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:id="@+id/buttonPause"
+        android:src="@mipmap/ic_pause"
+        android:background="@drawable/roundcorner"
+        android:onClick="pauseStopwatch"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/Pause" />
+
+    <ImageButton
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonStop"
+        android:src="@mipmap/ic_stop"
+        android:background="#303F9F"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:onClick="stopStopwatch"
+        android:contentDescription="@string/Stop" />
+
+    <ImageButton
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonNewLap"
+        android:src="@mipmap/ic_new_lap"
+        android:background="#303F9F"
+        android:visibility="gone"
+        android:onClick="newLap"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/new_lap" />
+
+    <ImageButton
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonShare"
+        android:src="@mipmap/ic_share"
+        android:background="#303F9F"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="shareLaps"
+        android:contentDescription="@string/Share" />
+
+
+</RelativeLayout>
